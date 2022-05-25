@@ -15,6 +15,7 @@ const App = () => {
     <MyButton title = "Button" onPress={() => alert('props')}/>
     <MyButton title = "Button" onPress={() => alert('children')}>Children Props</MyButton>
     <MyButton />
+    <Counter />
     </View>
   )
 
