@@ -1,5 +1,6 @@
+import propTypes from "prop-types";
 import React from "react"
-import { TouchableOpacity, Text} from "react-native"; //TouchableOpacity -> onpress 기능 제공
+import { TouchableOpacity, Text} from "react-native"; //TouchableOpacity -> onpress 기
 
 const MyButton = props  => {
     console.log(props)
@@ -9,7 +10,7 @@ const MyButton = props  => {
                 padding : 16,
                 margin : 10,
                 borderRadius : 8,
-                }} onPress = {() => alert('Click !!!')}>
+                }} onPress = {() => props.onPress()}>
             <Text style = {{
                 color : 'white',
                 fontSize : 24
@@ -17,5 +18,9 @@ const MyButton = props  => {
         </TouchableOpacity>
     )
 }
+MyButton.propTypes = {
+    title : PropTypes.string.isRequired,
+    name : PropTypes.string.isRequired,
+};
 
 export default MyButton;
